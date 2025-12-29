@@ -2,51 +2,145 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About - Mewad Maheshwari Nadiad Samaj</title>
+
 <style>
   body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    text-align: center;
-    background: #fafafa;
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #f8f9fa, #eef1f5);
+    color: #333;
   }
+
+  .container {
+    max-width: 420px;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 24px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin: 8px 0 4px;
+  }
+
+  .tagline {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 20px;
+  }
+
   .section {
     text-align: left;
     margin-top: 20px;
-    line-height: 1.6;
+    line-height: 1.7;
   }
-  h1 { font-size: 24px; font-weight: bold; }
-  h2 { font-size: 18px; font-weight: bold; margin-top: 15px; }
-  .logo {
-    width: 120px;
-    border-radius: 50%;
+
+  .section h2 {
+    font-size: 17px;
+    margin-bottom: 6px;
+    color: #222;
   }
-  .tagline {
-    font-style: italic;
-    color: gray;
+
+  .section p {
+    font-size: 14.5px;
+    color: #555;
+    margin: 0 0 10px;
+  }
+
+  .store-buttons {
+    margin: 24px 0 12px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .store-buttons a img {
+    height: 44px;
+  }
+
+  .footer {
+    margin-top: 16px;
+    font-size: 13px;
+    color: #888;
   }
 </style>
+
+<script>
+  window.onload = function () {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    const iosLink = "https://apps.apple.com/app/idXXXXXXXXXX";      // TODO: Replace
+    const androidLink = "https://play.google.com/store/apps/details?id=com.yourapp"; // TODO: Replace
+
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      window.location.href = iosLink;
+    } else if (/android/i.test(userAgent)) {
+      window.location.href = androidLink;
+    }
+  };
+</script>
+
 </head>
+
 <body>
 
-<img src="assets/images/samaj_logo.png" alt="Samaj Logo" class="logo">
+<div class="container">
 
-<h1>Mewad Maheshwari Nadiad Samaj</h1>
-<p class="tagline">Connecting Together, Preserving Heritage</p>
+  <img src="assets/images/samaj_logo.png" alt="Samaj Logo" class="logo">
 
-<div class="section">
-  <h2>About the Samaj</h2>
-  <p>The platform connects Maheshwari families of Nadiad to preserve culture and unity.</p>
+  <h1>Mewad Maheshwari Nadiad Samaj</h1>
+  <p class="tagline">Connecting Together, Preserving Heritage</p>
 
-  <h2>Mission & Vision</h2>
-  <p>Encourage cultural events, youth empowerment, and digital communication.</p>
+  <div class="store-buttons">
+    <a href="https://apps.apple.com/in/app/mewad-maheshwari-samaj-nadiad/id6755380541">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+           alt="Download on App Store">
+    </a>
 
-  <h2>Developed & Managed By</h2>
-  <p>Mewad Maheshwari Nadiad Samaj IT Committee<br>
-  📍 Nadiad, Gujarat, India<br>
-  ✉️ mewadmaheshwarinadiad@gmail.com</p>
+    <a href="https://play.google.com/store/apps/details?id=com.nadiadmaheshwari.app">
+      <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+           alt="Get it on Google Play">
+    </a>
+  </div>
 
-  <p style="color:gray;font-size:14px;">App Version: 1.0.0</p>
+  <div class="section">
+    <h2>About the Samaj</h2>
+    <p>
+      This platform connects Maheshwari families of Nadiad to preserve
+      culture, heritage, and community unity through digital engagement.
+    </p>
+
+    <h2>Mission & Vision</h2>
+    <p>
+      To encourage cultural events, youth empowerment,
+      and seamless communication within the Samaj.
+    </p>
+
+    <h2>Developed & Managed By</h2>
+    <p>
+      Mewad Maheshwari Nadiad Samaj IT Committee<br>
+      📍 Nadiad, Gujarat, India<br>
+      ✉️ mewadmaheshwarinadiad@gmail.com
+    </p>
+  </div>
+
+  <div class="footer">
+    App Version 1.0.0
+  </div>
+
 </div>
 
 </body>
